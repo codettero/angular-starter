@@ -7,6 +7,8 @@ import { HeroListComponent } from './hero-list/hero-list.component';
 import { SpongebobPipe } from './spongebob.pipe';
 import { EditHeroComponent } from './edit-hero/edit-hero.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { EditHeroComponent } from './edit-hero/edit-hero.component';
     EditHeroComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+ FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

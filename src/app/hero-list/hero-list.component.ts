@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
@@ -11,7 +11,7 @@ export class HeroListComponent implements OnInit {
 selectedUniverse: string;
   //constructor() { }
 editHandler(id) {
-  alert(id);
+ this.heroSelected.emit(id);
 }
 
   ngOnInit() {
@@ -23,5 +23,7 @@ changeUniverse(newUniverse) {
   this.selectedUniverse = newUniverse;
 }
 heros: Hero[];
+
+@Output() heroSelected = new EventEmitter();
 constructor(private heroService: HeroService) { }
 }

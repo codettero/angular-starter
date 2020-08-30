@@ -15,4 +15,7 @@ export class HeroComponent implements OnInit {
 editHero() {
   this.edit.emit(this.hero.id);
 }
+callHero() {
+    alert(this.hero.name + 'a fost chemat');
+}
 ;}

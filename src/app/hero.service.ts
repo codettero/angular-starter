@@ -43,4 +43,13 @@ universe: 'Marvel'
   }
 ];
   constructor() { }
+
+getHero(heroId) {
+    for (let i = 0; i < this.heros.length; i++) {
+      if (this.heros[i].id === heroId) {
+        return this.heros[i];
+      }
+    }
+  }
+
 }
