@@ -10,6 +10,9 @@ import { HeroService } from '../hero.service';
 export class HeroListComponent implements OnInit {
 selectedUniverse: string;
   //constructor() { }
+editHandler(id) {
+  alert(id);
+}
 
   ngOnInit() {
 this.selectedUniverse = 'all';

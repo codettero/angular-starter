@@ -10,5 +10,7 @@
   <jsh-hero
     *ngIf="selectedUniverse === 'all' || selectedUniverse===h.universe"
     [hero]="h"
+ (edit)="editHandler($event)"
   ></jsh-hero>
 </div>
+
